@@ -10,7 +10,9 @@
     "lint": "next lint",
     "format": "prettier ./src/**/*.{ts,tsx} --write",
     "ts": "tsc --noEmit --incremental --preserveWatchOutput --pretty",
-    "ts:watch": "yarn ts --watch"
+    "ts:watch": "yarn ts --watch",
+    "test:e2e": "playwright test",
+    "test:e2e:watch": "playwright test --ui"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
@@ -27,6 +29,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@playwright/test": "^1.37.1",
     "concurrently": "^8.2.0",
     "eslint-config-prettier": "^9.0.0",
     "husky": "^8.0.3",
