@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "prepare": "husky install",
-    "dev": "next dev",
+    "dev": "concurrently -n NEXT,TS -c magenta,cyan \"next dev\" \"yarn ts --watch\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier ./src/**/*.{ts,tsx} --write"
+    "format": "prettier ./src/**/*.{ts,tsx} --write",
+    "ts": "tsc --noEmit --incremental --preserveWatchOutput --pretty",
+    "ts:watch": "yarn ts --watch"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
@@ -25,6 +27,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "concurrently": "^8.2.0",
     "eslint-config-prettier": "^9.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.0",
