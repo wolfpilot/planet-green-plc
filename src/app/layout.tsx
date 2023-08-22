@@ -5,10 +5,10 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 
 // Styles
-import GlobalStyle from "../styles/global"
+import GlobalStyle from "@styles/global"
 
 // Components
-import StyledComponentsRegistry from "../lib/registry"
+import StyledComponentsRegistry from "@lib/registry"
 
 const inter = Inter({ subsets: ["latin"] })
 
