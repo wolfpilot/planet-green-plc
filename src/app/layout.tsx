@@ -2,7 +2,7 @@
 import type { Metadata } from "next"
 
 // Assets
-import { Inter } from "next/font/google"
+import { Manrope } from "next/font/google"
 
 // Styles
 import GlobalStyle from "@styles/global"
@@ -13,7 +13,12 @@ import StyledComponentsRegistry from "@lib/registry"
 // Components
 import PageWrapper from "@components/layout/PageWrapper/PageWrapper"
 
-const inter = Inter({ subsets: ["latin"] })
+const manropeFont = Manrope({
+  weight: ["400", "700"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +27,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
-    <body className={inter.className}>
+    <body className={manropeFont.className}>
       <StyledComponentsRegistry>
         <GlobalStyle />
 
