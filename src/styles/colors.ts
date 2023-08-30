@@ -14,4 +14,7 @@ export const colors = {
   success: "#91C01D",
   error: "#FA6960",
   textHighlight: "#0B486B",
+  gridBgColor: "#6470790d",
+  gridColumnBgColor: "#0085FF10",
+  gridTextColor: "#151515",
 }

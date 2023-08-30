@@ -100,6 +100,9 @@ export const base = css`
     --c-success: ${colors.success};
     --c-error: ${colors.error};
     --c-textHighlight: ${colors.textHighlight};
+    --c-gridBgColor: ${colors.gridBgColor};
+    --c-gridColumnBgColor: ${colors.gridColumnBgColor};
+    --c-gridTextColor: ${colors.gridTextColor};
   }
 
   /* Custom text highlighting */

@@ -5,9 +5,9 @@ export const BORDER_RADIUS_LRG = "16px"
 
 // The number of columns in the grid
 export const columns = {
-  XS: 3,
-  S: 3,
-  M: 6,
+  XS: 4,
+  S: 4,
+  M: 8,
   L: 12,
   XL: 12,
 }
@@ -16,7 +16,7 @@ export const columns = {
 export const offset = {
   XS: "10px",
   S: "10px",
-  M: "10px",
+  M: "20px",
   L: "20px",
   XL: "20px",
 }
@@ -25,7 +25,7 @@ export const offset = {
 export const gutter = {
   XS: "10px",
   S: "10px",
-  M: "10px",
+  M: "20px",
   L: "20px",
   XL: "20px",
 }

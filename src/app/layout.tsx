@@ -4,6 +4,9 @@ import type { Metadata } from "next"
 // Assets
 import { Manrope } from "next/font/google"
 
+// Utils
+import { AppProvider } from "@utils/context/AppContext"
+
 // Styles
 import GlobalStyle from "@styles/global"
 
@@ -11,6 +14,7 @@ import GlobalStyle from "@styles/global"
 import StyledComponentsRegistry from "@lib/registry"
 
 // Components
+import DebugGrid from "@components/utils/DebugGrid/DebugGrid"
 import PageWrapper from "@components/layout/PageWrapper/PageWrapper"
 
 const manropeFont = Manrope({
@@ -31,7 +35,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
       <StyledComponentsRegistry>
         <GlobalStyle />
 
-        <PageWrapper>{children}</PageWrapper>
+        <AppProvider>
+          <DebugGrid />
+
+          <PageWrapper>{children}</PageWrapper>
+        </AppProvider>
       </StyledComponentsRegistry>
     </body>
   </html>
