@@ -7,8 +7,11 @@ import { Inter } from "next/font/google"
 // Styles
 import GlobalStyle from "@styles/global"
 
-// Components
+// Libraries
 import StyledComponentsRegistry from "@lib/registry"
+
+// Components
+import PageWrapper from "@components/layout/PageWrapper/PageWrapper"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -22,7 +25,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
     <body className={inter.className}>
       <StyledComponentsRegistry>
         <GlobalStyle />
-        {children}
+
+        <PageWrapper>{children}</PageWrapper>
       </StyledComponentsRegistry>
     </body>
   </html>
