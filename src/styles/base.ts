@@ -92,11 +92,11 @@ export const base = css`
     --c-neutral3: ${colors.neutral3};
     --c-neutral4: ${colors.neutral4};
     --c-neutral5: ${colors.neutral5};
-    --c-pageColor: ${colors.pageColor};
     --c-accent1: ${colors.accent1};
     --c-accent2: ${colors.accent2};
     --c-accent3: ${colors.accent3};
     --c-accent4: ${colors.accent4};
+    --c-accent4: ${colors.accent5};
     --c-success: ${colors.success};
     --c-error: ${colors.error};
     --c-textHighlight: ${colors.textHighlight};
@@ -146,6 +146,18 @@ export const base = css`
   h5,
   h6 {
     font-weight: ${weights.bold};
+  }
+
+  h1 {
+    ${textStyles.headingL};
+  }
+
+  h2 {
+    ${textStyles.headingM};
+  }
+
+  h3 {
+    ${textStyles.headingS};
   }
 
   a {
