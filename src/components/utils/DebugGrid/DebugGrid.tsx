@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation"
 import { useState, useEffect } from "react"
 
 // Utils
-import { useWindowSize } from "@utils/useWindowSize"
+import { useWindowSize } from "@utils/hooks/useWindowSize"
 import { useAppState, useAppDispatch } from "@utils/context/AppContext"
 
 // Styles

@@ -14,6 +14,7 @@ import GlobalStyle from "@styles/global"
 import StyledComponentsRegistry from "@lib/registry"
 
 // Components
+import DOMManager from "@utils/managers/DOMManager"
 import DebugGrid from "@components/utils/DebugGrid/DebugGrid"
 import PageWrapper from "@components/layout/PageWrapper/PageWrapper"
 
@@ -32,6 +33,8 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
     <body className={manropeFont.className}>
+      <DOMManager />
+
       <StyledComponentsRegistry>
         <GlobalStyle />
 

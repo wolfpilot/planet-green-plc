@@ -15,7 +15,7 @@ import { colors } from "@styles/colors"
 import { weights } from "@styles/typography"
 import { textStyles } from "./textStyles"
 
-export const base = css`
+export const base: any = css`
   :root {
     // Layout
     --max-content-width: ${MAX_CONTENT_WIDTH};
