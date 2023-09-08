@@ -122,9 +122,11 @@ export const base: any = css`
 
   body {
     ${textStyles.copyM};
+
     position: relative;
     color: var(--c-black);
     background: var(--c-pageColor);
+    font-weight: ${weights.light};
   }
 
   h1,
@@ -187,6 +189,7 @@ export const base: any = css`
   img {
     max-width: 100%;
     margin-bottom: 0;
+    line-height: 0;
   }
 
   video {

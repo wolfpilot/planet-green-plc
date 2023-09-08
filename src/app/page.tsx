@@ -1,6 +1,9 @@
 // Types
 import { NextPage } from "next"
 
-const HomePage: NextPage = () => <h1>Homepage</h1>
+// Components
+import Hero from "@components/pages/website/hero/Hero"
+
+const HomePage: NextPage = () => <Hero />
 
 export default HomePage

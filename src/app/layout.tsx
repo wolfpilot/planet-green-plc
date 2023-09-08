@@ -19,7 +19,7 @@ import DebugGrid from "@components/utils/DebugGrid/DebugGrid"
 import PageWrapper from "@components/layout/PageWrapper/PageWrapper"
 
 const manropeFont = Manrope({
-  weight: ["400", "700"],
+  weight: ["300", "700"],
   style: ["normal"],
   subsets: ["latin"],
   display: "swap",
