@@ -15,7 +15,7 @@ import { colors } from "@styles/colors"
 import { weights } from "@styles/typography"
 import { textStyles } from "./textStyles"
 
-export const base = css`
+export const base: any = css`
   :root {
     // Layout
     --max-content-width: ${MAX_CONTENT_WIDTH};
@@ -24,6 +24,11 @@ export const base = css`
 
     // Spacing
     --spacing-default: ${spacing.default};
+    --spacing-xSmall: ${spacing.xSmall.base};
+    --spacing-small: ${spacing.small.base};
+    --spacing-medium: ${spacing.medium.base};
+    --spacing-large: ${spacing.large.base};
+    --spacing-xLarge: ${spacing.xLarge.base};
 
     /**
      * @NOTE: IE 11 doesn't support vars, so just use the equivalent vw values
@@ -58,18 +63,33 @@ export const base = css`
       --grid-columns: ${columns.S};
       --grid-offset-size: ${offset.S};
       --grid-gutter-size: ${gutter.S};
+      --spacing-xSmall: ${spacing.xSmall.S};
+      --spacing-small: ${spacing.small.S};
+      --spacing-medium: ${spacing.medium.S};
+      --spacing-large: ${spacing.large.S};
+      --spacing-xLarge: ${spacing.xLarge.S};
     `}
 
     ${mq.from.M`
       --grid-columns: ${columns.M};
       --grid-offset-size: ${offset.M};
       --grid-gutter-size: ${gutter.M};
+      --spacing-xSmall: ${spacing.xSmall.M};
+      --spacing-small: ${spacing.small.M};
+      --spacing-medium: ${spacing.medium.M};
+      --spacing-large: ${spacing.large.M};
+      --spacing-xLarge: ${spacing.xLarge.M};
     `}
 
     ${mq.from.L`
       --grid-columns: ${columns.L};
       --grid-offset-size: ${offset.L};
       --grid-gutter-size: ${gutter.L};
+      --spacing-xSmall: ${spacing.xSmall.L};
+      --spacing-small: ${spacing.small.L};
+      --spacing-medium: ${spacing.medium.L};
+      --spacing-large: ${spacing.large.L};
+      --spacing-xLarge: ${spacing.xLarge.L};
     `}
 
     ${mq.from.XL`
@@ -122,9 +142,11 @@ export const base = css`
 
   body {
     ${textStyles.copyM};
+
     position: relative;
     color: var(--c-black);
     background: var(--c-pageColor);
+    font-weight: ${weights.light};
   }
 
   h1,
@@ -187,6 +209,7 @@ export const base = css`
   img {
     max-width: 100%;
     margin-bottom: 0;
+    line-height: 0;
   }
 
   video {

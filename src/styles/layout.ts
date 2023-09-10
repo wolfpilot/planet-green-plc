@@ -32,5 +32,37 @@ export const gutter = {
 
 // Other spacing helpers
 export const spacing = {
+  // Default for text, blocks, etc
   default: "20px",
+  // Dynamic spacing used for controlling white space and rhythm on page
+  xSmall: {
+    base: "20px",
+    S: "24px",
+    M: "28px",
+    L: "32px",
+  },
+  small: {
+    base: "20px",
+    S: "24px",
+    M: "32px",
+    L: "40px",
+  },
+  medium: {
+    base: "32px",
+    S: "40px",
+    M: "48px",
+    L: "64px",
+  },
+  large: {
+    base: "40px",
+    S: "48px",
+    M: "64px",
+    L: "80px",
+  },
+  xLarge: {
+    base: "64px",
+    S: "80px",
+    M: "96px",
+    L: "128px",
+  },
 }
