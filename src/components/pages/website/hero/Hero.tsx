@@ -13,6 +13,15 @@ const Hero: React.FC = () => (
       <S.Content>
         <S.Tagline size="L">Say hello to a new revolution</S.Tagline>
         <S.Title level="h1">The future of clean energy</S.Title>
+
+        <S.CtaGroup>
+          <S.Cta href="/#plans" theme="primary">
+            Get started
+          </S.Cta>
+          <S.Cta href="/#vision" theme="secondary">
+            Discover more
+          </S.Cta>
+        </S.CtaGroup>
       </S.Content>
     </Container>
 
