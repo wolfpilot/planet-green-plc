@@ -1,3 +1,5 @@
+import { sanitize } from "isomorphic-dompurify"
+
 // Types
 import { Props } from "./types"
 
@@ -17,7 +19,9 @@ const Facts: React.FC<Props> = ({ items }) => {
           {items.map((item, index) => (
             <S.Item key={index}>
               <S.ItemValue>{item.value}</S.ItemValue>
-              <S.ItemDescription>{item.description}</S.ItemDescription>
+              <S.ItemDescription
+                dangerouslySetInnerHTML={{ __html: sanitize(item.description) }}
+              />
             </S.Item>
           ))}
         </S.List>
