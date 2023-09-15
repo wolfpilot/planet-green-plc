@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 // Styles
 import { mq } from "@styles/utils/mediaQueries"
+import { weights } from "@styles/typography"
 import { leafCtaStyles, Theme as LeafCtaTheme } from "@styles/ctas"
 
 // Components
@@ -33,6 +34,7 @@ export const Content = styled.div`
 
 export const Title = styled(Heading)`
   margin-bottom: 32px;
+  font-weight: ${weights.bold};
 `
 
 export const Tagline = styled(Text)`

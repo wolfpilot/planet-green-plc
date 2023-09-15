@@ -8,15 +8,17 @@ import { mq } from "@styles/utils/mediaQueries"
 import { weights } from "@styles/typography"
 import { textStyles } from "@styles/textStyles"
 
-export const Wrapper = styled.div``
+export const Wrapper = styled.div`
+  padding-top: var(--spacing-large);
+  padding-bottom: var(--spacing-xLarge);
+`
 
 export const List = styled(motion.ul)`
   display: flex;
   flex-direction: column;
   gap: calc(2 * var(--grid-gutter-size));
   list-style: none;
-  margin-top: var(--spacing-xLarge);
-  margin-bottom: var(--spacing-large);
+  margin: 0;
   padding: 0;
 
   ${mq.from.M`

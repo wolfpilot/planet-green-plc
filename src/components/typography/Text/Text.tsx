@@ -3,7 +3,7 @@ import React from "react"
 // Styles
 import * as S from "./styles"
 
-export type TextSizes = "S" | "M" | "L"
+export type TextSizes = "XS" | "S" | "M" | "L"
 
 interface IProps {
   className?: string

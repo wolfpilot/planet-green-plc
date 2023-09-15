@@ -14,6 +14,8 @@ export const Wrapper = styled.p<{ size: TextSizes }>`
       ? textStyles.copyL
       : size === "M"
       ? textStyles.copyM
+      : size === "XS"
+      ? textStyles.copyXS
       : textStyles.copyS};
 
   white-space: pre-line;
