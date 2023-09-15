@@ -11,24 +11,36 @@ export const textStyles = {
     font-size: 16px;
   `,
   copyM: css`
-    font-size: 20px;
+    font-size: 18px;
+
+    ${mq.from.L`
+      font-size: 20px;
+    `}
   `,
   copyL: css`
-    font-size: 24px;
-  `,
-  headingL: css`
-    font-size: 40px;
+    font-size: 20px;
 
     ${mq.from.S`
-      font-size: 48px;
-    `}
-
-    ${mq.from.M`
-      font-size: 64px;
+      font-size: 22px;
     `}
 
     ${mq.from.L`
-      font-size: 80px;
+      font-size: 24px;
+    `}
+  `,
+  headingS: css`
+    font-size: 26px;
+
+    ${mq.from.S`
+      font-size: 32px;
+    `}
+
+    ${mq.from.M`
+      font-size: 36px;
+    `}
+
+    ${mq.from.L`
+      font-size: 48px;
     `}
   `,
   headingM: css`
@@ -46,19 +58,19 @@ export const textStyles = {
       font-size: 64px;
     `}
   `,
-  headingS: css`
-    font-size: 26px;
+  headingL: css`
+    font-size: 40px;
 
     ${mq.from.S`
-      font-size: 32px;
+      font-size: 48px;
     `}
 
     ${mq.from.M`
-      font-size: 36px;
+      font-size: 64px;
     `}
 
     ${mq.from.L`
-      font-size: 48px;
+      font-size: 80px;
     `}
   `,
   hyperlink: css`
