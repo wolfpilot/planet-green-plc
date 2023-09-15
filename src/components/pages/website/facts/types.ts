@@ -1,5 +1,9 @@
 export interface Item {
-  value: string
+  amount: {
+    value: number
+    prefix?: string
+    suffix?: string
+  }
   description: string
 }
 

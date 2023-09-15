@@ -1,40 +1,43 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 
-const easeOutQuad = (t: number) => t * (2 - t)
+// Utils
+import { easeOutQuad } from "@utils/animation"
 
-// Assume a standard 60Hz display
-const FRAME_DURATION = 1000 / 60
-
-export const useCountUp = ({
-  target,
-  duration,
-}: {
+export interface Props {
+  isInView: boolean
   target: number
   duration: number
-}) => {
+}
+
+export const useCountUp = ({ isInView, target, duration }: Props) => {
+  const startTime = useRef<number | undefined>()
   const [value, setValue] = useState<number>(0)
 
-  // TODO: totalUpdates
-  const totalFrames = Math.round(duration / FRAME_DURATION)
-
   useEffect(() => {
-    let frame = 0
+    if (!isInView) return
 
-    const counter: ReturnType<typeof setInterval> = setInterval(() => {
-      frame += 1
+    const tick = (timestamp: number) => {
+      // Assign start time on first call
+      if (!startTime.current) {
+        startTime.current = timestamp
+      }
 
-      const progress = easeOutQuad(frame / totalFrames)
+      const elapsed = timestamp - startTime.current
+      const progress = easeOutQuad(elapsed / duration)
 
       setValue(progress * target)
 
-      // Ensure new value does not overshoot the target
-      if (frame === totalFrames) {
-        clearInterval(counter)
-      }
-    }, FRAME_DURATION)
-  }, [target, duration, totalFrames])
+      elapsed < duration
+        ? // Loop
+          window.requestAnimationFrame(tick)
+        : // Default to final value
+          setValue(target)
+    }
+
+    window.requestAnimationFrame(tick)
+  }, [isInView, target, duration])
 
   return Math.floor(value)
 }

@@ -2,7 +2,7 @@
 import { NextPage } from "next"
 
 // Data
-import { mockData } from "./data"
+import { mockData } from "@data/homepage"
 
 // Components
 import Hero from "@components/pages/website/hero/Hero"
