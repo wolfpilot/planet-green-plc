@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 // Styles
 import { mq } from "@styles/utils/mediaQueries"
@@ -25,7 +26,7 @@ export const Content = styled.div`
   align-items: center;
 `
 
-export const Header = styled.header`
+export const Header = styled(motion.header)`
   margin-bottom: var(--spacing-large);
   text-align: center;
 
@@ -44,7 +45,7 @@ export const Title = styled(Heading)`
 
 export const Description = styled(Text)``
 
-export const List = styled.ul`
+export const List = styled(motion.ul)`
   display: flex;
   flex-direction: column;
   gap: var(--grid-gutter-size);
@@ -57,7 +58,7 @@ export const List = styled.ul`
   `}
 `
 
-export const Footer = styled.footer`
+export const Footer = styled(motion.footer)`
   ${mq.from.M`
     width: calc(6 * var(--grid-column-size) + 5 * var(--grid-gutter-size));
   `}
@@ -85,7 +86,7 @@ export const BgImage = styled(Image)`
   object-fit: cover;
 `
 
-export const Item = styled.li<{ $isHighlighted: boolean }>`
+export const Item = styled(motion.li)<{ $isHighlighted: boolean }>`
   position: relative;
   overflow: hidden;
   flex: 1;

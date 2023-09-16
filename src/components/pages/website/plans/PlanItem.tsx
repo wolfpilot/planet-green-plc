@@ -4,6 +4,9 @@ import { Item as Props } from "./types"
 // Styles
 import * as S from "./styles"
 
+// Animation
+import { itemMotionProps } from "./animation"
+
 const PlanItem: React.FC<Props> = ({
   cost,
   title,
@@ -13,7 +16,7 @@ const PlanItem: React.FC<Props> = ({
   if (!cost?.value || !cost?.unit || !title || !description) return null
 
   return (
-    <S.Item $isHighlighted={isHighlighted}>
+    <S.Item {...itemMotionProps} $isHighlighted={isHighlighted}>
       {isHighlighted && <S.ItemBanner>most chosen</S.ItemBanner>}
 
       <S.ItemContent>

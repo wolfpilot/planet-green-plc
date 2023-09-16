@@ -10,6 +10,9 @@ import * as S from "./styles"
 import Container from "@components/layout/Container/Container"
 import PlanItem from "./PlanItem"
 
+// Animation
+import { genericContentMotionProps, listMotionProps } from "./animation"
+
 const Plans: React.FC<Props> = ({
   title,
   description,
@@ -23,7 +26,7 @@ const Plans: React.FC<Props> = ({
     <S.Wrapper>
       <Container>
         <S.Content>
-          <S.Header>
+          <S.Header {...genericContentMotionProps}>
             {title && (
               <S.Title level="h3">
                 <span dangerouslySetInnerHTML={{ __html: sanitize(title) }} />
@@ -38,14 +41,14 @@ const Plans: React.FC<Props> = ({
             )}
           </S.Header>
 
-          <S.List>
+          <S.List {...listMotionProps}>
             {items.map((item, index) => (
               <PlanItem key={index} {...item} />
             ))}
           </S.List>
 
           {footnote && (
-            <S.Footer>
+            <S.Footer {...genericContentMotionProps}>
               <S.Footnote size="S">
                 <span
                   dangerouslySetInnerHTML={{ __html: sanitize(footnote) }}
