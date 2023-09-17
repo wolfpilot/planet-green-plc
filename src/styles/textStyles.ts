@@ -82,7 +82,6 @@ export const textStyles = {
     `}
   `,
   boldText: css`
-    color: var(--c-accent3);
     font-weight: ${weights.bold};
   `,
   hyperlink: css`

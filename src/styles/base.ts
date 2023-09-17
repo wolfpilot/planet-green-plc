@@ -152,6 +152,11 @@ export const base: any = css`
     font-weight: ${weights.light};
   }
 
+  b,
+  strong {
+    ${textStyles.boldText};
+  }
+
   h1,
   h2,
   h3,
@@ -171,10 +176,6 @@ export const base: any = css`
   h5,
   h6 {
     font-weight: ${weights.light};
-
-    b {
-      ${textStyles.boldText};
-    }
   }
 
   h1 {
@@ -195,10 +196,6 @@ export const base: any = css`
 
   p a {
     ${textStyles.hyperlink};
-  }
-
-  p b {
-    ${textStyles.boldText};
   }
 
   button {
