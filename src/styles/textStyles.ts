@@ -2,16 +2,23 @@ import { css } from "styled-components"
 
 // Styles
 import { mq } from "@styles/utils/mediaQueries"
+import { weights } from "./typography"
 
 /**
  * Keeping global text styles here for a quick overview
  */
 export const textStyles = {
+  copyXS: css`
+    font-size: 14px;
+    line-height: 1.4;
+  `,
   copyS: css`
     font-size: 16px;
+    line-height: 1.4;
   `,
   copyM: css`
     font-size: 18px;
+    line-height: 1.4;
 
     ${mq.from.L`
       font-size: 20px;
@@ -19,6 +26,7 @@ export const textStyles = {
   `,
   copyL: css`
     font-size: 20px;
+    line-height: 1.4;
 
     ${mq.from.S`
       font-size: 22px;
@@ -73,8 +81,13 @@ export const textStyles = {
       font-size: 80px;
     `}
   `,
+  boldText: css`
+    color: var(--c-accent3);
+    font-weight: ${weights.bold};
+  `,
   hyperlink: css`
     color: var(--c-accent3);
+    font-weight: ${weights.bold};
 
     &:hover,
     &:focus {

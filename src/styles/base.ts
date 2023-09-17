@@ -4,14 +4,13 @@ import { css } from "styled-components"
 import { mq } from "@styles/utils/mediaQueries"
 import {
   MAX_CONTENT_WIDTH,
-  BORDER_RADIUS_SML,
-  BORDER_RADIUS_LRG,
+  borderRadius,
   columns,
   offset,
   gutter,
   spacing,
 } from "@styles/layout"
-import { colors } from "@styles/colors"
+import { colors, gradients } from "@styles/colors"
 import { weights } from "@styles/typography"
 import { textStyles } from "./textStyles"
 
@@ -19,8 +18,9 @@ export const base: any = css`
   :root {
     // Layout
     --max-content-width: ${MAX_CONTENT_WIDTH};
-    --border-radius-sml: ${BORDER_RADIUS_SML};
-    --border-radius-lrg: ${BORDER_RADIUS_LRG};
+    --border-radius-small: ${borderRadius.S};
+    --border-radius-medium: ${borderRadius.M};
+    --border-radius-large: ${borderRadius.L};
 
     // Spacing
     --spacing-default: ${spacing.default};
@@ -123,6 +123,9 @@ export const base: any = css`
     --c-gridBgColor: ${colors.gridBgColor};
     --c-gridColumnBgColor: ${colors.gridColumnBgColor};
     --c-gridTextColor: ${colors.gridTextColor};
+
+    // Gradients
+    --g-light-haze: ${gradients.lightHaze};
   }
 
   /* Custom text highlighting */
@@ -167,7 +170,11 @@ export const base: any = css`
   h4,
   h5,
   h6 {
-    font-weight: ${weights.bold};
+    font-weight: ${weights.light};
+
+    b {
+      ${textStyles.boldText};
+    }
   }
 
   h1 {
@@ -188,6 +195,10 @@ export const base: any = css`
 
   p a {
     ${textStyles.hyperlink};
+  }
+
+  p b {
+    ${textStyles.boldText};
   }
 
   button {

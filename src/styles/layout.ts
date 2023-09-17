@@ -1,7 +1,10 @@
 export const MAX_CONTENT_WIDTH = "1440px"
 
-export const BORDER_RADIUS_SML = "8px"
-export const BORDER_RADIUS_LRG = "16px"
+export const borderRadius = {
+  S: "8px",
+  M: "16px",
+  L: "32px",
+}
 
 // The number of columns in the grid
 export const columns = {

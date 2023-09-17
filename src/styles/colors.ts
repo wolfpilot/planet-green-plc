@@ -18,3 +18,11 @@ export const colors = {
   gridColumnBgColor: "#0085FF10",
   gridTextColor: "#151515",
 }
+
+export const gradients = {
+  lightHaze: `linear-gradient(
+    to bottom right,
+    var(--c-white),
+    var(--c-neutral3)
+  );`,
+}
