@@ -1,6 +1,9 @@
 import { ImageProps } from "next/image"
 
+export type Plan = "fix" | "eol" | "sol"
+
 export interface Item {
+  id: Plan
   cost: {
     value: number
     unit: string

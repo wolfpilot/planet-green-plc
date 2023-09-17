@@ -34,6 +34,7 @@ export const mockPlans: PlansProps = {
   description: `Choose one of our eco-friendly subscriptions below. Do you require something else? <a href:"mailto:bla@bla.com target="_top">Get in touch</a> with us and we’ll see what we can arrange!`,
   items: [
     {
+      id: "fix",
       cost: {
         value: 0.28,
         unit: "kWH",
@@ -43,6 +44,7 @@ export const mockPlans: PlansProps = {
         "Do you prefer having peace of mind? Sign up to our fixed cost plan and receive guaranteed rates (*) for your entire contract length.",
     },
     {
+      id: "eol",
       cost: {
         value: 0.32,
         unit: "kWH",
@@ -53,6 +55,7 @@ export const mockPlans: PlansProps = {
       isHighlighted: true,
     },
     {
+      id: "sol",
       cost: {
         value: 0.19,
         unit: "kWH",

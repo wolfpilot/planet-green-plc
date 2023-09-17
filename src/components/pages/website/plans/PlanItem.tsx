@@ -8,6 +8,7 @@ import * as S from "./styles"
 import { itemMotionProps } from "./animation"
 
 const PlanItem: React.FC<Props> = ({
+  id,
   cost,
   title,
   description,
@@ -19,7 +20,7 @@ const PlanItem: React.FC<Props> = ({
     <S.Item {...itemMotionProps} $isHighlighted={isHighlighted}>
       {isHighlighted && <S.ItemBanner>most chosen</S.ItemBanner>}
 
-      <S.ItemContent>
+      <S.ItemLink href={`/subscribe?plan=${id}`} $isHighlighted={isHighlighted}>
         <S.ItemCost>
           <S.ItemCostValue>€{cost.value}</S.ItemCostValue>
           <S.ItemCostUnit>/{cost.unit}</S.ItemCostUnit>
@@ -27,7 +28,7 @@ const PlanItem: React.FC<Props> = ({
 
         <S.ItemTitle level="h3">{title}</S.ItemTitle>
         <S.ItemDescription size="M">{description}</S.ItemDescription>
-      </S.ItemContent>
+      </S.ItemLink>
     </S.Item>
   )
 }

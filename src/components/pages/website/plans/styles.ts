@@ -9,8 +9,10 @@ import { mq } from "@styles/utils/mediaQueries"
 import { imageLightHazeEffect } from "@styles/effects"
 import { textStyles } from "@styles/textStyles"
 import { weights } from "@styles/typography"
+import { duration, ease } from "@styles/animation"
 
 // Components
+import InternalLink from "@components/link/InternalLink"
 import Heading from "@components/typography/Heading/Heading"
 import Text from "@components/typography/Text/Text"
 
@@ -92,26 +94,39 @@ export const Item = styled(motion.li)<{ $isHighlighted: boolean }>`
   flex: 1;
   flex-basis: calc(100% / 3);
   border-radius: var(--border-radius-medium);
+  transition: transform ${duration.slow}s ${ease.cubic};
 
   ${({ $isHighlighted }) =>
     $isHighlighted
       ? `
-    background-color: var(--c-accent3);
-    color: var(--c-white);
+      background-color: var(--c-accent3);
     `
       : `
-    background-color: var(--c-neutral2);
-    color: var(--c-black);
+      background-color: var(--c-neutral2);
     `}
+
+  &:hover {
+    transform: translateY(-20px);
+  }
 `
 
-export const ItemContent = styled.div`
+export const ItemLink = styled(InternalLink)<{ $isHighlighted: boolean }>`
+  display: block;
   width: 100%;
   height: 100%;
   padding: var(--spacing-xSmall) var(--spacing-xSmall) var(--spacing-medium)
     var(--spacing-xSmall);
   border-radius: var(--border-radius-medium);
   border: 2px solid var(--c-accent3);
+
+  ${({ $isHighlighted }) =>
+    $isHighlighted
+      ? `
+      color: var(--c-white);
+    `
+      : `
+      color: var(--c-black);
+    `}
 `
 
 export const ItemBanner = styled.div`
