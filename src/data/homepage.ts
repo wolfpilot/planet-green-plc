@@ -11,11 +11,14 @@ import PartnerLogoImgSrc08 from "@public/media/svgs/partners/logo-wwf.svg"
 import PartnerLogoImgSrc09 from "@public/media/svgs/partners/logo-bmw-group.svg"
 import PartnerLogoImgSrc10 from "@public/media/svgs/partners/logo-philips.svg"
 import PartnerLogoImgSrc11 from "@public/media/svgs/partners/logo-jp-morgan.svg"
+import VisionSrc01 from "@public/media/photos/homepage-vision-01.jpg"
+import VisionSrc02 from "@public/media/photos/homepage-vision-02.jpg"
 
 // Types
 import { Props as FactsProps } from "@components/pages/website/facts/types"
 import { Props as PlansProps } from "@components/pages/website/plans/types"
 import { Props as PartnersProps } from "@components/pages/website/partners/types"
+import { Props as TextMediaProps } from "@components/typography/TextMedia/types"
 
 export const mockFacts: FactsProps = {
   items: [
@@ -190,8 +193,32 @@ export const mockPartners: PartnersProps = {
   ],
 }
 
+export const mockVision: TextMediaProps = {
+  tagline: "What we stand for",
+  title: "<b>Our Vision</b>",
+  items: [
+    {
+      title: "Nation-Wide <b>Wind Farm</b> Technology",
+      copy: "Our affordable and eco-friendly approach to optimising available resources in The Netherlands.",
+      image: {
+        src: VisionSrc01,
+        alt: "Photo of wind turbines in a sunny, grass land",
+      },
+    },
+    {
+      title: "An array of <b>Solar Panels</b> On Your Own Rooftop",
+      copy: "New advancements in solar panel technologies now extend the lifespan of individual cells by 2.5x and allow for even easier maintenance and replacement.",
+      image: {
+        src: VisionSrc02,
+        alt: "Photo of solar panels installed on the rooftop of a house.",
+      },
+    },
+  ],
+}
+
 export const mockData = {
   facts: mockFacts,
   plans: mockPlans,
   partners: mockPartners,
+  vision: mockVision,
 }
