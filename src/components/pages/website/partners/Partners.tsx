@@ -8,6 +8,9 @@ import * as S from "./styles"
 import Container from "@components/layout/Container/Container"
 import SectionHeader from "@components/layout/Section/SectionHeader"
 
+// Animation
+import { listMotionProps } from "./animation"
+
 const Partners: React.FC<Props> = ({ tagline, title, items }) => {
   if (!title || !items?.length) return null
 
@@ -16,7 +19,7 @@ const Partners: React.FC<Props> = ({ tagline, title, items }) => {
       <Container>
         <SectionHeader title={title} tagline={tagline} />
 
-        <S.List>
+        <S.List {...listMotionProps}>
           {items.map((item, index) => (
             <S.Item key={index}>
               <S.ItemLink {...item.link}>

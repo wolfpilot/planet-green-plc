@@ -3,6 +3,7 @@
 import ExternalLink from "@components/link/ExternalLink"
 import Image from "next/image"
 import { styled } from "styled-components"
+import { motion } from "framer-motion"
 
 // Styles
 import { duration, ease } from "@styles/animation"
@@ -12,7 +13,7 @@ export const Wrapper = styled.div`
   padding-bottom: var(--spacing-large);
 `
 
-export const List = styled.ul`
+export const List = styled(motion.ul)`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -22,7 +23,7 @@ export const List = styled.ul`
   padding: 0;
 `
 
-export const Item = styled.li``
+export const Item = styled(motion.li)``
 
 export const ItemLink = styled(ExternalLink)`
   display: block;
