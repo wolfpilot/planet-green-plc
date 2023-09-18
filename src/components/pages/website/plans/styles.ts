@@ -43,6 +43,11 @@ export const Header = styled(motion.header)`
 
 export const Title = styled(Heading)`
   margin-bottom: var(--spacing-xSmall);
+
+  b,
+  strong {
+    color: var(--c-accent3);
+  }
 `
 
 export const Description = styled(Text)``
@@ -72,6 +77,11 @@ export const Footer = styled(motion.footer)`
 
 export const Footnote = styled(Text)`
   text-align: center;
+
+  b,
+  strong {
+    color: var(--c-accent3);
+  }
 `
 
 export const BgImageWrapper = styled.div`
