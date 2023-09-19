@@ -9,6 +9,13 @@ import * as S from "./styles"
 // Components
 import SectionHeader from "@components/layout/Section/SectionHeader"
 
+// Animation
+import {
+  itemMotionProps,
+  itemTextMotionProps,
+  itemImageMotionProps,
+} from "./animation"
+
 const TextMedia: React.FC<Props> = ({ tagline, title, items }) => {
   if (!title || !items?.length) return null
 
@@ -18,8 +25,8 @@ const TextMedia: React.FC<Props> = ({ tagline, title, items }) => {
 
       <S.List>
         {items.map((item, index) => (
-          <S.Item key={index}>
-            <S.ItemContentWrapper>
+          <S.Item key={index} {...itemMotionProps}>
+            <S.ItemContentWrapper {...itemTextMotionProps}>
               <S.ItemContent>
                 {item.title && (
                   <S.ItemTitle level="h3">
@@ -32,7 +39,7 @@ const TextMedia: React.FC<Props> = ({ tagline, title, items }) => {
               </S.ItemContent>
             </S.ItemContentWrapper>
 
-            <S.ItemImageWrapper>
+            <S.ItemImageWrapper {...itemImageMotionProps}>
               <S.ItemImage {...item.image} />
             </S.ItemImageWrapper>
           </S.Item>

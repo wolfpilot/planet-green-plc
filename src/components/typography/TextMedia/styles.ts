@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 // Styles
 import { mq } from "@styles/utils/mediaQueries"
@@ -26,7 +27,7 @@ export const List = styled.ul`
   padding: 0;
 `
 
-export const ItemImageWrapper = styled.div`
+export const ItemImageWrapper = styled(motion.div)`
   // Remove white space that would otherwise offset the images
   line-height: 0;
 
@@ -43,7 +44,7 @@ export const ItemImage = styled(Image)`
   object-fit: cover;
 `
 
-export const ItemContentWrapper = styled.div`
+export const ItemContentWrapper = styled(motion.div)`
   padding-top: var(--spacing-small);
   padding-bottom: var(--spacing-large);
 
@@ -72,7 +73,7 @@ export const ItemTitle = styled(Heading)`
 
 export const ItemCopy = styled(Text)``
 
-export const Item = styled.li`
+export const Item = styled(motion.li)`
   display: flex;
   flex-direction: column-reverse;
 
