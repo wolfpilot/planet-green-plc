@@ -116,7 +116,7 @@ export const base: any = css`
     --c-accent2: ${colors.accent2};
     --c-accent3: ${colors.accent3};
     --c-accent4: ${colors.accent4};
-    --c-accent4: ${colors.accent5};
+    --c-accent5: ${colors.accent5};
     --c-success: ${colors.success};
     --c-error: ${colors.error};
     --c-textHighlight: ${colors.textHighlight};
@@ -125,7 +125,28 @@ export const base: any = css`
     --c-gridTextColor: ${colors.gridTextColor};
 
     // Gradients
+    --g-diagonal-accent: ${gradients.diagonalAccent};
     --g-light-haze: ${gradients.lightHaze};
+
+    // Swiper
+
+    /**
+     * Unfortunately, there are no docs for styling this component.
+     *
+     * The best way to infer the CSS vars is to just look through the source files
+     * or the pre-applied CSS.
+     */
+    --swiper-pagination-bullet-width: 8px;
+    --swiper-pagination-bullet-height: 8px;
+    --swiper-pagination-bullet-border-radius: 50%;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-inactive-color: ${colors.accent1};
+
+    --swiper-pagination-opacity: 1;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-color: ${colors.accent2};
   }
 
   /* Custom text highlighting */

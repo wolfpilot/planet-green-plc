@@ -4,8 +4,9 @@ import { ImageProps } from "next/image"
 import { Props as SectionHeaderProps } from "@components/layout/Section/types"
 
 export interface Item {
+  id: string
+  title: string
   image: ImageProps
-  link: React.AnchorHTMLAttributes<HTMLAnchorElement>
 }
 
 export interface Props extends SectionHeaderProps {

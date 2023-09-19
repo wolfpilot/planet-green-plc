@@ -13,12 +13,14 @@ import PartnerLogoImgSrc10 from "@public/media/svgs/partners/logo-philips.svg"
 import PartnerLogoImgSrc11 from "@public/media/svgs/partners/logo-jp-morgan.svg"
 import VisionSrc01 from "@public/media/photos/homepage-vision-01.jpg"
 import VisionSrc02 from "@public/media/photos/homepage-vision-02.jpg"
+import NewsSrc01 from "@public/media/photos/homepage-news-01.jpg"
 
 // Types
 import { Props as FactsProps } from "@components/pages/website/facts/types"
 import { Props as PlansProps } from "@components/pages/website/plans/types"
 import { Props as PartnersProps } from "@components/pages/website/partners/types"
 import { Props as TextMediaProps } from "@components/typography/TextMedia/types"
+import { Props as NewsProps } from "@components/pages/website/news/types"
 
 export const mockFacts: FactsProps = {
   items: [
@@ -216,9 +218,89 @@ export const mockVision: TextMediaProps = {
   ],
 }
 
+export const mockNews: NewsProps = {
+  tagline: "Keeping up to date",
+  title: "<b>Latest News</b>",
+  items: [
+    {
+      id: "2023-nuclear-fusion",
+      title: "2023 - A promising year for nuclear fusion",
+      image: {
+        src: NewsSrc01,
+        alt: "Photo of wind turbines in a sunny, grass land",
+      },
+    },
+    {
+      id: "2023-nuclear-fusion",
+      title: "2023 - A promising year for nuclear fusion",
+      image: {
+        src: NewsSrc01,
+        alt: "Photo of wind turbines in a sunny, grass land",
+      },
+    },
+    {
+      id: "2023-nuclear-fusion",
+      title: "2023 - A promising year for nuclear fusion",
+      image: {
+        src: NewsSrc01,
+        alt: "Photo of wind turbines in a sunny, grass land",
+      },
+    },
+    {
+      id: "2023-nuclear-fusion",
+      title: "2023 - A promising year for nuclear fusion",
+      image: {
+        src: NewsSrc01,
+        alt: "Photo of wind turbines in a sunny, grass land",
+      },
+    },
+    {
+      id: "2023-nuclear-fusion",
+      title: "2023 - A promising year for nuclear fusion",
+      image: {
+        src: NewsSrc01,
+        alt: "Photo of wind turbines in a sunny, grass land",
+      },
+    },
+    {
+      id: "2023-nuclear-fusion",
+      title: "2023 - A promising year for nuclear fusion",
+      image: {
+        src: NewsSrc01,
+        alt: "Photo of wind turbines in a sunny, grass land",
+      },
+    },
+    {
+      id: "2023-nuclear-fusion",
+      title: "2023 - A promising year for nuclear fusion",
+      image: {
+        src: NewsSrc01,
+        alt: "Photo of wind turbines in a sunny, grass land",
+      },
+    },
+    {
+      id: "2023-nuclear-fusion",
+      title: "2023 - A promising year for nuclear fusion",
+      image: {
+        src: NewsSrc01,
+        alt: "Photo of wind turbines in a sunny, grass land",
+      },
+    },
+    {
+      id: "2023-nuclear-fusion",
+      title: "2023 - A promising year for nuclear fusion",
+      image: {
+        src: NewsSrc01,
+        alt: "Photo of wind turbines in a sunny, grass land",
+      },
+    },
+  ],
+}
+
 export const mockData = {
   facts: mockFacts,
   plans: mockPlans,
   partners: mockPartners,
   vision: mockVision,
+  news: mockNews,
 }

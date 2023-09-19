@@ -20,6 +20,11 @@ export const colors = {
 }
 
 export const gradients = {
+  diagonalAccent: `linear-gradient(
+    to bottom right,
+    var(--c-accent1),
+    var(--c-accent5)
+  );`,
   lightHaze: `linear-gradient(
     to bottom right,
     var(--c-white),
