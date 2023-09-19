@@ -15,7 +15,7 @@ describe("Plans", () => {
       screen.getByRole("heading", {
         name: /A plan suited to your exact needs/i,
       })
-    )
+    ).toBeInTheDocument()
 
     expect(screen.getAllByRole("listitem").length).toBe(3)
   })

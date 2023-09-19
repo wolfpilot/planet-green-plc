@@ -18,7 +18,7 @@ describe("PlanItem", () => {
       screen.getByRole("heading", {
         name: "Fixed costs",
       })
-    )
+    ).toBeInTheDocument()
 
     expect(
       screen.getByText(
