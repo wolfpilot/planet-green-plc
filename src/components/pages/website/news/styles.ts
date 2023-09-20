@@ -4,6 +4,7 @@ import Image from "next/image"
 import styled from "styled-components"
 
 // Styles
+import { mq } from "@styles/utils/mediaQueries"
 import { textStyles } from "@styles/textStyles"
 import { duration, ease } from "@styles/animation"
 
@@ -70,6 +71,19 @@ export const SliderWrapper = styled.div`
         border-radius ${duration.slow}s ${ease.cubic},
         border-color ${duration.slow}s ${ease.cubic};
 
+      /**
+       * Fix FOUC showing on initial load
+       *
+       * @see: https://github.com/nolimits4web/swiper/discussions/6828
+       */
+      ${mq.from.S`
+        flex-basis: calc(50% - 5px);
+      `}
+
+      ${mq.from.L`
+        flex-basis: calc(25% - 15px);
+      `}
+      
       &:hover {
         border-radius: 0;
         border-color: var(--c-accent3);
