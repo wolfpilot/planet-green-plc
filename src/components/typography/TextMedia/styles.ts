@@ -16,11 +16,6 @@ import Text from "@components/typography/Text/Text"
  * which is why we don't always have round numbers for spacing.
  */
 
-export const Wrapper = styled.div`
-  padding-top: var(--spacing-medium);
-  padding-bottom: var(--spacing-large);
-`
-
 export const List = styled.ul`
   list-style: none;
   margin: 0;

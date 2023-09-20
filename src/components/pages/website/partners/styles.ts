@@ -8,11 +8,6 @@ import { motion } from "framer-motion"
 // Styles
 import { duration, ease } from "@styles/animation"
 
-export const Wrapper = styled.div`
-  padding-top: var(--spacing-medium);
-  padding-bottom: var(--spacing-large);
-`
-
 export const List = styled(motion.ul)`
   display: flex;
   flex-wrap: wrap;

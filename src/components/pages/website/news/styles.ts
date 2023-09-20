@@ -10,11 +10,6 @@ import { duration, ease } from "@styles/animation"
 // Components
 import InternalLink from "@components/link/InternalLink"
 
-export const Wrapper = styled.div`
-  padding-top: var(--spacing-medium);
-  padding-bottom: var(--spacing-large);
-`
-
 export const Slider = styled.div``
 
 export const SlideLink = styled(InternalLink)``

@@ -8,7 +8,7 @@ import { Props } from "./types"
 
 // Components
 import Container from "@components/layout/Container/Container"
-import SectionHeader from "@components/layout/Section/SectionHeader"
+import Section from "@components/layout/Section/Section"
 
 // Styles
 import "swiper/css"
@@ -45,10 +45,8 @@ const News: React.FC<Props> = ({ tagline, title, items }) => {
   if (!title || !items?.length) return null
 
   return (
-    <S.Wrapper>
+    <Section title={title} tagline={tagline}>
       <Container>
-        <SectionHeader title={title} tagline={tagline} />
-
         <S.SliderWrapper>
           <Swiper {...swiperConfig}>
             {items.map((item, index) => {
@@ -72,7 +70,7 @@ const News: React.FC<Props> = ({ tagline, title, items }) => {
           </Swiper>
         </S.SliderWrapper>
       </Container>
-    </S.Wrapper>
+    </Section>
   )
 }
 

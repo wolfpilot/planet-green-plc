@@ -7,7 +7,7 @@ import { Props } from "./types"
 import * as S from "./styles"
 
 // Components
-import SectionHeader from "@components/layout/Section/SectionHeader"
+import Section from "@components/layout/Section/Section"
 
 // Animation
 import {
@@ -20,9 +20,7 @@ const TextMedia: React.FC<Props> = ({ tagline, title, items }) => {
   if (!title || !items?.length) return null
 
   return (
-    <S.Wrapper>
-      <SectionHeader title={title} tagline={tagline} />
-
+    <Section title={title} tagline={tagline}>
       <S.List>
         {items.map((item, index) => (
           <S.Item key={index} {...itemMotionProps}>
@@ -31,7 +29,9 @@ const TextMedia: React.FC<Props> = ({ tagline, title, items }) => {
                 {item.title && (
                   <S.ItemTitle level="h3">
                     <span
-                      dangerouslySetInnerHTML={{ __html: sanitize(item.title) }}
+                      dangerouslySetInnerHTML={{
+                        __html: sanitize(item.title),
+                      }}
                     />
                   </S.ItemTitle>
                 )}
@@ -45,7 +45,7 @@ const TextMedia: React.FC<Props> = ({ tagline, title, items }) => {
           </S.Item>
         ))}
       </S.List>
-    </S.Wrapper>
+    </Section>
   )
 }
 
