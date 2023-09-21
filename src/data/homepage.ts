@@ -14,6 +14,8 @@ import PartnerLogoImgSrc11 from "@public/media/svgs/partners/logo-jp-morgan.svg"
 import VisionSrc01 from "@public/media/photos/homepage-vision-01.jpg"
 import VisionSrc02 from "@public/media/photos/homepage-vision-02.jpg"
 import NewsSrc01 from "@public/media/photos/homepage-news-01.jpg"
+import LogoAppleAppStoreSrc from "@public/media/svgs/logo-apple-app-store.svg"
+import LogoGooglePlayStoreSrc from "@public/media/svgs/logo-google-play-store.svg"
 
 // Types
 import { Props as FactsProps } from "@components/pages/website/facts/types"
@@ -21,6 +23,7 @@ import { Props as PlansProps } from "@components/pages/website/plans/types"
 import { Props as PartnersProps } from "@components/pages/website/partners/types"
 import { Props as TextMediaProps } from "@components/typography/TextMedia/types"
 import { Props as NewsProps } from "@components/pages/website/news/types"
+import { Props as AppBannerProps } from "@components/pages/website/appBanner/types"
 
 export const mockFacts: FactsProps = {
   items: [
@@ -297,10 +300,37 @@ export const mockNews: NewsProps = {
   ],
 }
 
+export const mockAppBanner: AppBannerProps = {
+  title: "Payments and insights <b>on the go</b> with our mobile apps",
+  ctas: [
+    {
+      title: "App Store",
+      link: {
+        href: "https://www.apple.com/app-store/",
+      },
+      image: {
+        src: LogoAppleAppStoreSrc,
+        alt: "Logo of Apple App Store",
+      },
+    },
+    {
+      title: "Google Play",
+      link: {
+        href: "https://play.google.com/",
+      },
+      image: {
+        src: LogoGooglePlayStoreSrc,
+        alt: "Logo of Google Play Store",
+      },
+    },
+  ],
+}
+
 export const mockData = {
   facts: mockFacts,
   plans: mockPlans,
   partners: mockPartners,
   vision: mockVision,
   news: mockNews,
+  appBanner: mockAppBanner,
 }

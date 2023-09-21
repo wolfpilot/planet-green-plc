@@ -6,7 +6,7 @@ import styled from "styled-components"
 // Styles
 import { mq } from "@styles/utils/mediaQueries"
 import { weights } from "@styles/typography"
-import { leafCtaStyles, Theme as LeafCtaTheme } from "@styles/ctas"
+import { ctaLeafStyles, Theme as LeafCtaTheme } from "@styles/ctas"
 
 // Components
 import Heading from "@components/typography/Heading/Heading"
@@ -52,7 +52,7 @@ export const CtaGroup = styled.div`
 `
 
 export const Cta = styled(InternalLink)<{ theme: LeafCtaTheme }>`
-  ${leafCtaStyles};
+  ${ctaLeafStyles};
 `
 
 export const BackgroundImage = styled(Image)`

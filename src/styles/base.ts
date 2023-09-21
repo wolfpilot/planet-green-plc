@@ -213,6 +213,7 @@ export const base: any = css`
 
   a {
     text-decoration: none;
+    cursor: pointer;
   }
 
   p a {
