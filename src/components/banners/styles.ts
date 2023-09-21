@@ -1,6 +1,7 @@
 "use client"
 
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 // Styles
 import { mq } from "@styles/utils/mediaQueries"
@@ -25,6 +26,8 @@ export const Wrapper = styled.div`
   `}
 `
 
+export const TitleWrapper = styled(motion.div)``
+
 export const Title = styled(Heading)`
   color: var(--c-white);
   text-align: center;
@@ -39,4 +42,4 @@ export const Title = styled(Heading)`
   }
 `
 
-export const Content = styled.div``
+export const Content = styled(motion.div)``
