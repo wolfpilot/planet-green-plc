@@ -4,9 +4,9 @@ import { ImageProps } from "next/image"
 import { Props as SectionProps } from "@components/layout/Section/types"
 
 export interface Item {
-  image: ImageProps
+  id: string
   title: string
-  copy: string
+  image: ImageProps
 }
 
 export interface Props extends SectionProps {

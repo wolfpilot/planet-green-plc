@@ -6,7 +6,7 @@ import * as S from "./styles"
 
 // Components
 import Container from "@components/layout/Container/Container"
-import SectionHeader from "@components/layout/Section/SectionHeader"
+import Section from "@components/layout/Section/Section"
 
 // Animation
 import { listMotionProps } from "./animation"
@@ -15,10 +15,8 @@ const Partners: React.FC<Props> = ({ tagline, title, items }) => {
   if (!title || !items?.length) return null
 
   return (
-    <S.Wrapper>
+    <Section title={title} tagline={tagline}>
       <Container>
-        <SectionHeader title={title} tagline={tagline} />
-
         <S.List {...listMotionProps}>
           {items.map((item, index) => (
             <S.Item key={index}>
@@ -29,7 +27,7 @@ const Partners: React.FC<Props> = ({ tagline, title, items }) => {
           ))}
         </S.List>
       </Container>
-    </S.Wrapper>
+    </Section>
   )
 }
 

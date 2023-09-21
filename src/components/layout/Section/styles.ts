@@ -8,10 +8,17 @@ import Image from "next/image"
 import Text from "@components/typography/Text/Text"
 import Heading from "@components/typography/Heading/Heading"
 
-export const Wrapper = styled.header`
+export const Wrapper = styled.section`
+  padding-top: var(--spacing-medium);
+  padding-bottom: var(--spacing-large);
+`
+
+export const Header = styled.header`
   margin-bottom: var(--spacing-medium);
   text-align: center;
 `
+
+export const Content = styled.div``
 
 export const AnimTaglineWrapper = styled(motion.div)`
   margin-bottom: var(--spacing-default);
