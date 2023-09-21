@@ -11,8 +11,6 @@ import Container from "@components/layout/Container/Container"
 import Section from "@components/layout/Section/Section"
 
 // Styles
-import "swiper/css"
-import "swiper/css/pagination"
 import * as S from "./styles"
 import { breakpoints } from "@styles/utils/mediaQueries"
 
