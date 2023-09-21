@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 // Styles
 import { mq } from "@styles/utils/mediaQueries"
@@ -13,7 +14,18 @@ import InternalLink from "@components/link/InternalLink"
 
 export const Slider = styled.div``
 
-export const SlideLink = styled(InternalLink)``
+export const SlideLinkWrapper = styled(motion.div)``
+
+export const SlideLink = styled(InternalLink)`
+  display: block;
+  overflow: hidden;
+  border-top-left-radius: var(--border-radius-large);
+  border-bottom-right-radius: var(--border-radius-large);
+  border: 1px solid var(--c-neutral3);
+  transition:
+    border-radius ${duration.slow}s ${ease.cubic},
+    border-color ${duration.slow}s ${ease.cubic};
+`
 
 export const SlideImageWrapper = styled.div`
   position: relative;
@@ -56,21 +68,13 @@ export const SlideCta = styled.div`
   transition: color ${duration.slow}s ${ease.cubic};
 `
 
-export const SliderWrapper = styled.div`
+export const SliderWrapper = styled(motion.div)`
   .swiper {
     &-wrapper {
       margin-bottom: var(--spacing-medium);
     }
 
     &-slide {
-      overflow: hidden;
-      border-top-left-radius: var(--border-radius-large);
-      border-bottom-right-radius: var(--border-radius-large);
-      border: 1px solid var(--c-neutral3);
-      transition:
-        border-radius ${duration.slow}s ${ease.cubic},
-        border-color ${duration.slow}s ${ease.cubic};
-
       /**
        * Fix FOUC showing on initial load
        *
@@ -85,8 +89,10 @@ export const SliderWrapper = styled.div`
       `}
       
       &:hover {
-        border-radius: 0;
-        border-color: var(--c-accent3);
+        ${SlideLink} {
+          border-radius: 0;
+          border-color: var(--c-accent3);
+        }
 
         ${SlideImageWrapper} {
           &::after {

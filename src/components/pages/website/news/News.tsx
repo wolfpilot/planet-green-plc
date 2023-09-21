@@ -13,9 +13,11 @@ import Section from "@components/layout/Section/Section"
 // Styles
 import "swiper/css"
 import "swiper/css/pagination"
-
 import * as S from "./styles"
 import { breakpoints } from "@styles/utils/mediaQueries"
+
+// Animation
+import { listMotionProps, itemMotionProps } from "./animation"
 
 // Setup
 const swiperConfig: SwiperProps = {
@@ -47,23 +49,25 @@ const News: React.FC<Props> = ({ tagline, title, items }) => {
   return (
     <Section title={title} tagline={tagline}>
       <Container>
-        <S.SliderWrapper>
+        <S.SliderWrapper {...listMotionProps}>
           <Swiper {...swiperConfig}>
             {items.map((item, index) => {
               if (!item.id || !item.image?.src || !item.title) return null
 
               return (
                 <SwiperSlide key={index}>
-                  <S.SlideLink href={`/news/${item.id}`}>
-                    <S.SlideImageWrapper>
-                      <S.SlideImage {...item.image} />
-                    </S.SlideImageWrapper>
+                  <S.SlideLinkWrapper {...itemMotionProps}>
+                    <S.SlideLink href={`/news/${item.id}`}>
+                      <S.SlideImageWrapper>
+                        <S.SlideImage {...item.image} />
+                      </S.SlideImageWrapper>
 
-                    <S.SlideContent>
-                      <S.SlideTitle>{item.title}</S.SlideTitle>
-                      <S.SlideCta>{`Read more ->`}</S.SlideCta>
-                    </S.SlideContent>
-                  </S.SlideLink>
+                      <S.SlideContent>
+                        <S.SlideTitle>{item.title}</S.SlideTitle>
+                        <S.SlideCta>{`Read more ->`}</S.SlideCta>
+                      </S.SlideContent>
+                    </S.SlideLink>
+                  </S.SlideLinkWrapper>
                 </SwiperSlide>
               )
             })}
