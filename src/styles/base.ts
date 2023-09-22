@@ -214,6 +214,10 @@ export const base: any = css`
   a {
     text-decoration: none;
     cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   p a {

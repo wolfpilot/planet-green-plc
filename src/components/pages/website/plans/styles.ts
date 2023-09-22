@@ -115,7 +115,8 @@ export const Item = styled(motion.li)<{ $isHighlighted: boolean }>`
       background-color: var(--c-neutral2);
     `}
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     transform: translateY(-20px);
   }
 `

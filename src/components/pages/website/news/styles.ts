@@ -88,7 +88,8 @@ export const SliderWrapper = styled(motion.div)`
         flex-basis: calc(25% - 15px);
       `}
       
-      &:hover {
+      &:hover,
+      &:focus-within {
         ${SlideLink} {
           border-radius: 0;
           border-color: var(--c-accent3);

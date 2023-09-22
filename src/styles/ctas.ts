@@ -39,7 +39,8 @@ export const ctaRoundedStyles = css<{ theme: Theme }>`
         border: 1px solid var(--c-accent3);
         color: var(--c-white);
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
             background-color: transparent;
             color: var(--c-accent3);
         }
@@ -49,7 +50,8 @@ export const ctaRoundedStyles = css<{ theme: Theme }>`
         border: 1px solid var(--c-white);
         color: var(--c-black);
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
           span {
             transform: translateX(8px);
           }
@@ -70,7 +72,8 @@ export const ctaLeafStyles = css<{ theme: Theme }>`
         border: 1px solid var(--c-accent1);
         color: var(--c-black);
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
             border-radius: 0;
             background-color: transparent;
             color: var(--c-accent1);
@@ -81,7 +84,8 @@ export const ctaLeafStyles = css<{ theme: Theme }>`
         border: 1px solid var(--c-white);
         color: var(--c-white);
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
             border-radius: 0;
         }
   `}
