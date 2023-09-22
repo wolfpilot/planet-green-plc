@@ -28,7 +28,8 @@ export const ItemLink = styled(ExternalLink)`
     opacity ${duration.slow}s ${ease.cubic},
     filter ${duration.slow}s ${ease.cubic};
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     opacity: 1;
     filter: grayscale(0);
   }
