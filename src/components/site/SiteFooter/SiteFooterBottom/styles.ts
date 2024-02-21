@@ -32,7 +32,7 @@ export const Content = styled.div`
 
 export const Meta = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: space-between;
   gap: var(--spacing-medium);
   text-align: center;
