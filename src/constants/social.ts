@@ -1,27 +1,24 @@
-export type SocialLinks = Record<
-  string,
-  React.AnchorHTMLAttributes<HTMLAnchorElement>
->
+import { Routes } from "@ts/global"
 
-export const social: SocialLinks = {
+export const social: Routes = {
   email: {
-    href: "mailto:howl@wolfpilot.co",
     title: "Email",
+    href: "mailto:howl@wolfpilot.co",
   },
   facebook: {
-    href: "https://www.facebook.com/#",
     title: "Facebook",
+    href: "https://www.facebook.com/#",
   },
   linkedin: {
-    href: "https://www.linkedin.com/in/#",
     title: "LinkedIn",
+    href: "https://www.linkedin.com/in/#",
   },
   twitter: {
-    href: "https://twitter.com/#",
     title: "Twitter",
+    href: "https://twitter.com/#",
   },
   youtube: {
-    href: "https://www.youtube.com/#",
     title: "YouTube",
+    href: "https://www.youtube.com/#",
   },
 }

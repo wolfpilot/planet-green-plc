@@ -2,6 +2,7 @@
 import { Props } from "./types"
 
 // Constants
+import { routes } from "@constants/routes"
 import { social } from "@constants/social"
 
 // Styles
@@ -28,12 +29,15 @@ const SiteFooter: React.FC<Props> = () => {
                 © {currentYear} Planet Blue
               </S.BottomCopyright>
               <S.BottomExtraLinksGroup>
-                <S.BottomExtraLink href="#">
-                  Terms & Conditions
-                </S.BottomExtraLink>
-                <S.BottomExtraLink href="#">Privacy</S.BottomExtraLink>
-                <S.BottomExtraLink href="#">Disclaimer</S.BottomExtraLink>
-                <S.BottomExtraLink href="#">Sitemap</S.BottomExtraLink>
+                {Object.entries(routes).map(
+                  ([key, value]) =>
+                    value.title &&
+                    value.href && (
+                      <S.BottomExtraLink key={key} href={value.href}>
+                        {value.title}
+                      </S.BottomExtraLink>
+                    )
+                )}
               </S.BottomExtraLinksGroup>
             </S.BottomMeta>
 
