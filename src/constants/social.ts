@@ -1,6 +1,6 @@
-import { Routes } from "@ts/global"
+import { Route } from "@ts/global"
 
-export const social: Routes = {
+export const social: Record<string, Route> = {
   email: {
     title: "Email",
     href: "mailto:howl@wolfpilot.co",

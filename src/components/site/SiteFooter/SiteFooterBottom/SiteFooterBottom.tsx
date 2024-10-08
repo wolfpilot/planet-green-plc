@@ -1,5 +1,5 @@
 // Types
-import { Routes } from "@ts/global"
+import { Route } from "@ts/global"
 
 // Styles
 import * as S from "./styles"
@@ -9,13 +9,13 @@ import Container from "@components/layout/Container/Container"
 
 export interface Props {
   copyright: string
-  extraLinks: Routes
-  socialLinks: Routes
+  navLinks: Route[]
+  socialLinks: Record<string, Route>
 }
 
 const SiteFooterBottom: React.FC<Props> = ({
   copyright,
-  extraLinks,
+  navLinks,
   socialLinks,
 }) => (
   <S.Wrapper>
@@ -24,17 +24,19 @@ const SiteFooterBottom: React.FC<Props> = ({
         <S.Meta>
           {copyright && <S.Copyright>{copyright}</S.Copyright>}
 
-          <S.ExtraLinksGroup>
-            {Object.entries(extraLinks).map(
+          <S.NavLinks>
+            {Object.entries(navLinks).map(
               ([key, value]) =>
                 value.title &&
                 value.href && (
-                  <S.ExtraLink key={key} href={value.href}>
-                    {value.title}
-                  </S.ExtraLink>
+                  <S.NavLinksItem key={key}>
+                    <S.NavLinksItemAnchor href={value.href}>
+                      {value.title}
+                    </S.NavLinksItemAnchor>
+                  </S.NavLinksItem>
                 )
             )}
-          </S.ExtraLinksGroup>
+          </S.NavLinks>
         </S.Meta>
 
         <S.SocialLinksGroup>

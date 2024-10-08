@@ -2,8 +2,10 @@
 import { Props } from "./types"
 
 // Constants
-import { routes } from "@constants/routes"
-import { social } from "@constants/social"
+import { social as socialLinks } from "@constants/social"
+
+// Data
+import { secondaryLinks } from "./data"
 
 // Styles
 import * as S from "./styles"
@@ -18,10 +20,11 @@ const SiteFooter: React.FC<Props> = () => {
   const currentYear = new Date().getFullYear()
   const copyright = `© ${currentYear} Planet Blue`
 
+  // Parse data
   const dataFooterBottom: FooterBottomProps = {
     copyright,
-    extraLinks: routes,
-    socialLinks: social,
+    navLinks: secondaryLinks,
+    socialLinks,
   }
 
   return (

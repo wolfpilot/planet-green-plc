@@ -50,17 +50,22 @@ export const Copyright = styled.div`
   font-weight: ${weights.bold};
 `
 
-export const ExtraLinksGroup = styled.div`
+export const NavLinks = styled.ul`
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xSmall);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
   ${mq.from.L`
     flex-direction: row;
   `}
 `
 
-export const ExtraLink = styled(InternalLink)`
+export const NavLinksItem = styled.li``
+
+export const NavLinksItemAnchor = styled(InternalLink)`
   ${textStyles.copyS};
   color: var(--c-white);
   transition: color ${duration.medium}s ${ease.cubic};
