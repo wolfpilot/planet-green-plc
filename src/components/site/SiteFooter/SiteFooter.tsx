@@ -5,7 +5,7 @@ import { Props } from "./types"
 import { social as socialLinks } from "@constants/social"
 
 // Data
-import { secondaryLinks } from "./data"
+import { primaryLinks, secondaryLinks } from "./data"
 
 // Styles
 import * as S from "./styles"
@@ -21,6 +21,10 @@ const SiteFooter: React.FC<Props> = () => {
   const copyright = `© ${currentYear} Planet Blue`
 
   // Parse data
+  const dataFooterTop = {
+    navLinks: primaryLinks,
+  }
+
   const dataFooterBottom: FooterBottomProps = {
     copyright,
     navLinks: secondaryLinks,
@@ -29,7 +33,7 @@ const SiteFooter: React.FC<Props> = () => {
 
   return (
     <S.Wrapper>
-      <SiteFooterTop />
+      <SiteFooterTop {...dataFooterTop} />
       <SiteFooterBottom {...dataFooterBottom} />
     </S.Wrapper>
   )
