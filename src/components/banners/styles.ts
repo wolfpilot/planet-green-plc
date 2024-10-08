@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 
   ${mq.from.M`
     padding-left: calc(var(--grid-column-size) + var(--grid-gutter-size));
-    padding-right: calc(var(--grid-column-size) +var(--grid-gutter-size));
+    padding-right: calc(var(--grid-column-size) + var(--grid-gutter-size));
   `}
 
   ${mq.from.L`
