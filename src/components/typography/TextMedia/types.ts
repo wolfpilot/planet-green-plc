@@ -1,7 +1,7 @@
 import { ImageProps } from "next/image"
 
 // Types
-import { Props as SectionProps } from "@components/layout/Section/types"
+import { Props as ContentRowProps } from "@components/layout/Content/ContentRow/types"
 
 export interface Item {
   image: ImageProps
@@ -9,6 +9,6 @@ export interface Item {
   copy: string
 }
 
-export interface Props extends SectionProps {
+export interface Props extends ContentRowProps {
   items: Item[]
 }

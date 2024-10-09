@@ -8,7 +8,7 @@ import { Props } from "./types"
 
 // Components
 import Container from "@components/layout/Container/Container"
-import Section from "@components/layout/Section/Section"
+import ContentRow from "@components/layout/Content/ContentRow/ContentRow"
 
 // Styles
 import * as S from "./styles"
@@ -45,7 +45,7 @@ const News: React.FC<Props> = ({ tagline, title, items }) => {
   if (!title || !items?.length) return null
 
   return (
-    <Section title={title} tagline={tagline}>
+    <ContentRow title={title} tagline={tagline}>
       <Container>
         <S.SliderWrapper {...listMotionProps}>
           <Swiper {...swiperConfig}>
@@ -72,7 +72,7 @@ const News: React.FC<Props> = ({ tagline, title, items }) => {
           </Swiper>
         </S.SliderWrapper>
       </Container>
-    </Section>
+    </ContentRow>
   )
 }
 

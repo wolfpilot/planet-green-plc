@@ -7,7 +7,7 @@ import { Props } from "./types"
 import * as S from "./styles"
 
 // Components
-import Section from "@components/layout/Section/Section"
+import ContentRow from "@components/layout/Content/ContentRow/ContentRow"
 
 // Animation
 import {
@@ -20,7 +20,7 @@ const TextMedia: React.FC<Props> = ({ tagline, title, items }) => {
   if (!title || !items?.length) return null
 
   return (
-    <Section title={title} tagline={tagline}>
+    <ContentRow title={title} tagline={tagline}>
       <S.List>
         {items.map((item, index) => (
           <S.Item key={index} {...itemMotionProps}>
@@ -45,7 +45,7 @@ const TextMedia: React.FC<Props> = ({ tagline, title, items }) => {
           </S.Item>
         ))}
       </S.List>
-    </Section>
+    </ContentRow>
   )
 }
 

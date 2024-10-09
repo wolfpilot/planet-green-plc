@@ -17,9 +17,14 @@ import {
   taglineMotionProps,
   dividerMotionProps,
   titleMotionProps,
-} from "@components/layout/Section/animation"
+} from "@components/layout/Content/ContentRow/animation"
 
-const Section: React.FC<Props> = ({ className, children, tagline, title }) => {
+const ContentRow: React.FC<Props> = ({
+  className,
+  children,
+  tagline,
+  title,
+}) => {
   if (!title) return null
 
   return (
@@ -52,4 +57,4 @@ const Section: React.FC<Props> = ({ className, children, tagline, title }) => {
   )
 }
 
-export default Section
+export default ContentRow

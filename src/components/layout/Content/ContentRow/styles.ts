@@ -8,7 +8,7 @@ import Image from "next/image"
 import Text from "@components/typography/Text/Text"
 import Heading from "@components/typography/Heading/Heading"
 
-export const Wrapper = styled.section`
+export const Wrapper = styled.div`
   padding-top: var(--spacing-medium);
   padding-bottom: var(--spacing-large);
 `

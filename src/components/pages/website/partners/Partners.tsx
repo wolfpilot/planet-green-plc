@@ -6,7 +6,7 @@ import * as S from "./styles"
 
 // Components
 import Container from "@components/layout/Container/Container"
-import Section from "@components/layout/Section/Section"
+import ContentRow from "@components/layout/Content/ContentRow/ContentRow"
 
 // Animation
 import { listMotionProps } from "./animation"
@@ -15,7 +15,7 @@ const Partners: React.FC<Props> = ({ tagline, title, items }) => {
   if (!title || !items?.length) return null
 
   return (
-    <Section title={title} tagline={tagline}>
+    <ContentRow title={title} tagline={tagline}>
       <Container>
         <S.List {...listMotionProps}>
           {items.map((item, index) => (
@@ -27,7 +27,7 @@ const Partners: React.FC<Props> = ({ tagline, title, items }) => {
           ))}
         </S.List>
       </Container>
-    </Section>
+    </ContentRow>
   )
 }
 
