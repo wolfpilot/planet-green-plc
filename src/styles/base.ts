@@ -164,6 +164,10 @@ export const base: any = css`
     font-smooth: never;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     ${textStyles.copyM};
 

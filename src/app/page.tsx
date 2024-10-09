@@ -16,12 +16,42 @@ import AppBanner from "@components/pages/website/appBanner/AppBanner"
 const HomePage: NextPage = () => (
   <>
     <Hero />
-    {mockData?.facts && <Facts {...mockData.facts} />}
-    {mockData?.plans && <Plans {...mockData.plans} />}
-    {mockData?.partners && <Partners {...mockData.partners} />}
-    {mockData?.vision && <TextMedia {...mockData.vision} />}
-    {mockData?.news && <News {...mockData.news} />}
-    {mockData?.appBanner && <AppBanner {...mockData.appBanner} />}
+
+    {mockData?.facts && (
+      <div id="facts">
+        <Facts {...mockData.facts} />
+      </div>
+    )}
+
+    {mockData?.plans && (
+      <div id="plans">
+        <Plans {...mockData.plans} />
+      </div>
+    )}
+
+    {mockData?.partners && (
+      <div id="partners">
+        <Partners {...mockData.partners} />
+      </div>
+    )}
+
+    {mockData?.vision && (
+      <div id="vision">
+        <TextMedia {...mockData.vision} />
+      </div>
+    )}
+
+    {mockData?.news && (
+      <div id="news">
+        <News {...mockData.news} />
+      </div>
+    )}
+
+    {mockData?.appBanner && (
+      <div id="apps">
+        <AppBanner {...mockData.appBanner} />
+      </div>
+    )}
   </>
 )
 
