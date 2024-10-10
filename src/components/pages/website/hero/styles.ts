@@ -19,9 +19,21 @@ export const Wrapper = styled.div`
   align-items: flex-end;
   width: 100%;
   height: 100vh;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--g-photo-mask);
+    mix-blend-mode: multiply;
+  }
 `
 
 export const Content = styled.div`
+  position: relative;
   margin-bottom: var(--spacing-small);
   color: var(--c-white);
 
