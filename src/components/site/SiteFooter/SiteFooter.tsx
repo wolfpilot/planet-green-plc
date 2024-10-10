@@ -7,9 +7,6 @@ import { social as socialLinks } from "@constants/social"
 // Data
 import { primaryLinks, secondaryLinks } from "./data"
 
-// Styles
-import * as S from "./styles"
-
 // Components
 import SiteFooterTop from "./SiteFooterTop/SiteFooterTop"
 import SiteFooterBottom, {
@@ -32,10 +29,10 @@ const SiteFooter: React.FC<Props> = () => {
   }
 
   return (
-    <S.Wrapper>
+    <footer>
       <SiteFooterTop {...dataFooterTop} />
       <SiteFooterBottom {...dataFooterBottom} />
-    </S.Wrapper>
+    </footer>
   )
 }
 
