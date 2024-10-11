@@ -18,3 +18,22 @@ export const colors = {
   gridColumnBgColor: "#0085FF10",
   gridTextColor: "#151515",
 }
+
+export const gradients = {
+  diagonalAccent: `linear-gradient(
+    to bottom right,
+    var(--c-accent1),
+    var(--c-accent5)
+  );`,
+  lightHaze: `linear-gradient(
+    to bottom right,
+    var(--c-white),
+    var(--c-neutral3)
+  );`,
+  photoMask: `linear-gradient(
+    to bottom,
+    rgba(152, 152, 152, 100),
+    rgba(177, 177, 177, 25),
+    rgba(3, 15, 3, 100)
+  );`,
+}

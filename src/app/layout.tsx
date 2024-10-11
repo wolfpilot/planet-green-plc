@@ -14,11 +14,14 @@ import GlobalStyle from "@styles/global"
 import StyledComponentsRegistry from "@lib/registry"
 
 // Components
+import DOMManager from "@utils/managers/DOMManager"
 import DebugGrid from "@components/utils/DebugGrid/DebugGrid"
 import PageWrapper from "@components/layout/PageWrapper/PageWrapper"
+import SiteHeader from "@components/site/SiteHeader/SiteHeader"
+import SiteFooter from "@components/site/SiteFooter/SiteFooter"
 
 const manropeFont = Manrope({
-  weight: ["400", "700"],
+  weight: ["300", "700"],
   style: ["normal"],
   subsets: ["latin"],
   display: "swap",
@@ -32,13 +35,19 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
     <body className={manropeFont.className}>
+      <DOMManager />
+
       <StyledComponentsRegistry>
         <GlobalStyle />
 
         <AppProvider>
           <DebugGrid />
 
+          <SiteHeader />
+
           <PageWrapper>{children}</PageWrapper>
+
+          <SiteFooter />
         </AppProvider>
       </StyledComponentsRegistry>
     </body>

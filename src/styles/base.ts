@@ -4,26 +4,31 @@ import { css } from "styled-components"
 import { mq } from "@styles/utils/mediaQueries"
 import {
   MAX_CONTENT_WIDTH,
-  BORDER_RADIUS_SML,
-  BORDER_RADIUS_LRG,
+  borderRadius,
   columns,
   offset,
   gutter,
   spacing,
 } from "@styles/layout"
-import { colors } from "@styles/colors"
+import { colors, gradients } from "@styles/colors"
 import { weights } from "@styles/typography"
 import { textStyles } from "./textStyles"
 
-export const base = css`
+export const base: any = css`
   :root {
     // Layout
     --max-content-width: ${MAX_CONTENT_WIDTH};
-    --border-radius-sml: ${BORDER_RADIUS_SML};
-    --border-radius-lrg: ${BORDER_RADIUS_LRG};
+    --border-radius-small: ${borderRadius.S};
+    --border-radius-medium: ${borderRadius.M};
+    --border-radius-large: ${borderRadius.L};
 
     // Spacing
     --spacing-default: ${spacing.default};
+    --spacing-xSmall: ${spacing.xSmall.base};
+    --spacing-small: ${spacing.small.base};
+    --spacing-medium: ${spacing.medium.base};
+    --spacing-large: ${spacing.large.base};
+    --spacing-xLarge: ${spacing.xLarge.base};
 
     /**
      * @NOTE: IE 11 doesn't support vars, so just use the equivalent vw values
@@ -58,18 +63,33 @@ export const base = css`
       --grid-columns: ${columns.S};
       --grid-offset-size: ${offset.S};
       --grid-gutter-size: ${gutter.S};
+      --spacing-xSmall: ${spacing.xSmall.S};
+      --spacing-small: ${spacing.small.S};
+      --spacing-medium: ${spacing.medium.S};
+      --spacing-large: ${spacing.large.S};
+      --spacing-xLarge: ${spacing.xLarge.S};
     `}
 
     ${mq.from.M`
       --grid-columns: ${columns.M};
       --grid-offset-size: ${offset.M};
       --grid-gutter-size: ${gutter.M};
+      --spacing-xSmall: ${spacing.xSmall.M};
+      --spacing-small: ${spacing.small.M};
+      --spacing-medium: ${spacing.medium.M};
+      --spacing-large: ${spacing.large.M};
+      --spacing-xLarge: ${spacing.xLarge.M};
     `}
 
     ${mq.from.L`
       --grid-columns: ${columns.L};
       --grid-offset-size: ${offset.L};
       --grid-gutter-size: ${gutter.L};
+      --spacing-xSmall: ${spacing.xSmall.L};
+      --spacing-small: ${spacing.small.L};
+      --spacing-medium: ${spacing.medium.L};
+      --spacing-large: ${spacing.large.L};
+      --spacing-xLarge: ${spacing.xLarge.L};
     `}
 
     ${mq.from.XL`
@@ -96,13 +116,38 @@ export const base = css`
     --c-accent2: ${colors.accent2};
     --c-accent3: ${colors.accent3};
     --c-accent4: ${colors.accent4};
-    --c-accent4: ${colors.accent5};
+    --c-accent5: ${colors.accent5};
     --c-success: ${colors.success};
     --c-error: ${colors.error};
     --c-textHighlight: ${colors.textHighlight};
     --c-gridBgColor: ${colors.gridBgColor};
     --c-gridColumnBgColor: ${colors.gridColumnBgColor};
     --c-gridTextColor: ${colors.gridTextColor};
+
+    // Gradients
+    --g-diagonal-accent: ${gradients.diagonalAccent};
+    --g-light-haze: ${gradients.lightHaze};
+    --g-photo-mask: ${gradients.photoMask};
+
+    // Swiper
+
+    /**
+     * Unfortunately, there are no docs for styling this component.
+     *
+     * The best way to infer the CSS vars is to just look through the source files
+     * or the pre-applied CSS.
+     */
+    --swiper-pagination-bullet-width: 8px;
+    --swiper-pagination-bullet-height: 8px;
+    --swiper-pagination-bullet-border-radius: 50%;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-inactive-color: ${colors.accent1};
+
+    --swiper-pagination-opacity: 1;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-color: ${colors.accent2};
   }
 
   /* Custom text highlighting */
@@ -120,11 +165,22 @@ export const base = css`
     font-smooth: never;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     ${textStyles.copyM};
+
     position: relative;
     color: var(--c-black);
     background: var(--c-pageColor);
+    font-weight: ${weights.light};
+  }
+
+  b,
+  strong {
+    ${textStyles.boldText};
   }
 
   h1,
@@ -145,7 +201,7 @@ export const base = css`
   h4,
   h5,
   h6 {
-    font-weight: ${weights.bold};
+    font-weight: ${weights.light};
   }
 
   h1 {
@@ -162,6 +218,11 @@ export const base = css`
 
   a {
     text-decoration: none;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   p a {
@@ -187,6 +248,7 @@ export const base = css`
   img {
     max-width: 100%;
     margin-bottom: 0;
+    line-height: 0;
   }
 
   video {
