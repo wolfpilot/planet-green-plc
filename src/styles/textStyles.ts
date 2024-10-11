@@ -84,6 +84,17 @@ export const textStyles = {
   boldText: css`
     font-weight: ${weights.bold};
   `,
+  navLink: css`
+    font-size: 16px;
+
+    ${mq.from.M`
+      font-size: 18px;
+    `}
+
+    ${mq.from.L`
+      font-size: 20px;
+    `}
+  `,
   hyperlink: css`
     color: var(--c-accent3);
     font-weight: ${weights.bold};
