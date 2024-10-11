@@ -17,6 +17,7 @@ import StyledComponentsRegistry from "@lib/registry"
 import DOMManager from "@utils/managers/DOMManager"
 import DebugGrid from "@components/utils/DebugGrid/DebugGrid"
 import PageWrapper from "@components/layout/PageWrapper/PageWrapper"
+import SiteHeader from "@components/site/SiteHeader/SiteHeader"
 import SiteFooter from "@components/site/SiteFooter/SiteFooter"
 
 const manropeFont = Manrope({
@@ -41,6 +42,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
 
         <AppProvider>
           <DebugGrid />
+
+          <SiteHeader />
 
           <PageWrapper>{children}</PageWrapper>
 

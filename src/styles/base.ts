@@ -127,6 +127,7 @@ export const base: any = css`
     // Gradients
     --g-diagonal-accent: ${gradients.diagonalAccent};
     --g-light-haze: ${gradients.lightHaze};
+    --g-photo-mask: ${gradients.photoMask};
 
     // Swiper
 

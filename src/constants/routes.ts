@@ -13,6 +13,12 @@ export const routes = {
       href: "/about/vision",
     },
   },
+  account: {
+    overview: {
+      title: "Overview",
+      href: "/account/overview",
+    },
+  },
   disclaimer: {
     title: "Disclaimer",
     href: "/disclaimer",

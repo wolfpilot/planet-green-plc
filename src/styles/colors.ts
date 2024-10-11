@@ -30,4 +30,10 @@ export const gradients = {
     var(--c-white),
     var(--c-neutral3)
   );`,
+  photoMask: `linear-gradient(
+    to bottom,
+    rgba(152, 152, 152, 100),
+    rgba(177, 177, 177, 25),
+    rgba(3, 15, 3, 100)
+  );`,
 }
