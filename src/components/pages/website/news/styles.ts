@@ -118,7 +118,8 @@ export const SliderWrapper = styled(motion.div)`
     &-pagination-bullet {
       transition: background-color ${duration.slow}s ${ease.cubic};
 
-      &:hover {
+      &:hover,
+      &:focus-within {
         background-color: var(--c-accent3);
       }
     }

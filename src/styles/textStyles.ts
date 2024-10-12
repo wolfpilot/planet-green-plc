@@ -100,7 +100,7 @@ export const textStyles = {
     font-weight: ${weights.bold};
 
     &:hover,
-    &:focus {
+    &:focus-within {
       outline: none;
       text-decoration: underline;
     }

@@ -24,7 +24,8 @@ export const Content = styled.div`
     color: var(--c-black);
     font-weight: ${weights.normal};
 
-    &:hover {
+    &:hover,
+    &:focus-within {
       text-decoration: underline;
     }
   }
