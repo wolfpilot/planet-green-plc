@@ -40,6 +40,7 @@ export const Meta = styled.div`
   ${mq.from.L`
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     text-align: left;
   `}
 `
